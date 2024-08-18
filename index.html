@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #022812, #058b3d);
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background: rgb(0, 0, 0);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background: #07c757;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .login-container button:hover {
+            background: #2575fc;
+        }
+        .login-container .error {
+            color: red;
+            margin-top: 10px;
+        }
+        .login-container img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .rtl {
+            direction:rtl;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2 style="color:white;">התחברות מ"פ למערכת </h2>
+        <img src="/logo.png" alt="logo">
+        <form action="login.php" method="POST">
+            <input class="rtl" type="text" name="username" placeholder="שם משתמש (סודי ביותר)" required>
+            <input class="rtl" type="password" name="password" placeholder="סיסמה" required>
+            <button class="rtl" type="submit">להתחברות לחץ כאן</button>
+        </form>
+        <div class="error rtl" id="error-message">
+<script src="/script.js"></script>
+    </div>
+</body>
+</html>
